@@ -86,8 +86,8 @@ fprintf('----------------------------------\n')
 fprintf('cac ung suat chinh cua tensor ung suat lech: \n')
 fprintf('S1 : %d  S2: %d  S3: %d \n',round([a-p b-p c-p],2))
 fprintf('----------------------------------\n')
-tuongduong=a-(sigma_k/sigma_n)*c;
 fprintf('ung suat tuong duong theo thuyet ben Mohr: \n')
+tuongduong=a-(sigma_k/sigma_n)*c;
 disp(tuongduong)
 fprintf('Gioi han ben cua vat lieu:\n')
 fprintf('- Gioi han ben keo: %d \n- Gioi han ben nen: %d \n',sigma_k,sigma_n)
@@ -97,14 +97,10 @@ else
     fprintf('=> Diem khong thoa ben \n')
 end
 fprintf('----------------------------------\n')
-fprintf('Gioi han ben tuong duong cua he theo thuyet ben von-Mises la \n')
+fprintf('Gioi han ben tuong duong cua he la')
 sigma_td=sqrt(a^2+b^2+c^2-a*b-b*c-a*c);
-fprintf('sigma_tuongduong= %d \n',sigma_td)
-if sigma_td <= sigma
-    fprintf('=> Diem thoa ben \n')
-else
-    fprintf('=> Diem khong thoa ben \n')
-end
+fprintf('sigma_tuongduong= %d',sigma_td)
+if sigma
 fprintf('----------------------------------\n')
 fprintf('Bien dang dai theo cac phuong chinh: \n')
 E1=(1/E)*(a-poisson*(b+c));
