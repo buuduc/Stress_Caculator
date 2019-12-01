@@ -10,7 +10,7 @@ E=2e9
 sigma_n=10^3
 sigma_k=sigma_n/10
 %kiem tra ben theo thuyet ben von Mises
-sigma=15
+sigma=15000
 %%
 fprintf('----------------------------------\n')
 fprintf('----------------------------------\n')
